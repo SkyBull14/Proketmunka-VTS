@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../CSS/registration.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Regisztráció</title>
 </head>
 <body>
-<div class="header">
 
-</div>
-<div class="container">
-<nav>
-      <nav>
+<div class="fluid-container">
+<div class="row">
+      <nav class="col">
         <div class="navDiv">
             <ul class="navUl">
                 <li class="navLi"><a class="navLinks" href="login.php">BEJELNTKEZÉS</a></li>
@@ -48,6 +47,10 @@ if(isset($_POST['submit']))
 	}
 }	
 ?>
+    <div class="col-8">
+    <div class="header">
+        <img src="../Images/system/Header.png" class="img-fluid">
+    </div>
 	<div class="formDiv">
 	<form method="post" action="elerhetosegek.php">
         <div class="formboxleft">
@@ -93,5 +96,12 @@ if(isset($_POST['submit']))
 	</form>
 	</div>
 </div>
+    <div class="col">
+        <!-- potenciális chat interfész és megjelenitett fiók adatok -->
+    </div>
+
+</div>
+</div>
+
 </body>
 </html>

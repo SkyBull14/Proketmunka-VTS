@@ -10,16 +10,6 @@ body {
   background-size: cover;
 }
 
-.container {
-  margin: 0 auto 0 auto;
-  width: 900px;
-}
-.header {
-  display: flex;
-  background-image: url("../Images/system/Header.png");
-  background-size: cover;
-  height: 280px;
-}
 .navUl {
   list-style-type: none;
   margin: 0;
@@ -27,9 +17,9 @@ body {
   border: 0px solid #000;
   overflow: hidden;
 }
+
 .navDiv {
   height: 80px;
- 
 }
 
 li {
@@ -37,8 +27,6 @@ li {
 }
 
 .navLi {
-  display: block;
-  width: 140px;
   background-color: #ddd;
   padding: 10px;
   text-decoration: none;
@@ -46,6 +34,7 @@ li {
   color: #000;
   border: 1px solid #ddd;
   text-align: center;
+  width: auto;
 }
 
 .navLi:hover {
@@ -59,7 +48,7 @@ li {
 }
 
 p.topList {
-  font-size: 25sp;
+  font-size: 25px;
   text-align: center;
   text-decoration: underline;
 }

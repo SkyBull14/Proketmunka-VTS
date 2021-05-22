@@ -8,16 +8,6 @@ body {
   background-size: cover;
 }
 
-.container {
-  margin: 0 auto 0 auto;
-  width: 900px;
-}
-.header {
-  display: flex;
-  background-image: url("../Images/system/Header.png");
-  background-size: cover;
-  height: 280px;
-}
 .navUl {
   list-style-type: none;
   margin: 0;
