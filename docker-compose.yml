@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+
+  database:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: "inu"
+      MYSQL_USER: "doggo"
+      MYSQL_PASSWORD: "shiba"
+      MYSQL_DATABASE: "dogwalker_app"
+    ports:
+      - "3306:3306"
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.0
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+  app:
+    build: .
+    image: "ghcr.io/adaliszk/skybull-dogwalker-app"
+    environment:
+      DB_USER: "doggo"
+      DB_PASS: "shiba"
+      DB_NAME: "dogwalker_app"
+      DB_HOST: "database"
+      MAIL_FROM: "Skybull Kutyasétáltatás <dogwalker-app@skybull.dev>"
+
+    depends_on:
+      - database
+      - mailhog
+    links:
+      - mailhog:mailhog
+    volumes:
+      - ".:/var/www/html"
+    ports:
+      - "8080:80"

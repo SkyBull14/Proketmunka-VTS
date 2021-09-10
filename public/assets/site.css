@@ -1,0 +1,59 @@
+body, td, th {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body.app {
+    background: #843BC3 url('images/background.png') no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#site-header {
+    margin-top: 5px;
+}
+
+#site-header img {
+    max-width: 100%;
+}
+
+main > .card:first-of-type,
+main > .container > .card:first-of-type {
+    border-radius: 0 0 4px 4px !important;
+}
+
+.navbar-card {
+    padding: 10px;
+}
+
+.form-margin {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h3.card-title {
+    border-radius: 3px;
+    background-color: deeppink;
+    text-align: center;
+    padding: 10px;
+}
+
+.spinner-hidden > .spinner-border, .message-hidden {
+    display: none;
+}
+
+.spinner-shown > .spinner-border, .message-shown {
+
+}
+
+label.form-required::after {
+    content: "*";
+    color: red;
+    display: inline-block;
+    padding: 3px;
+    font-weight: bold;
+}

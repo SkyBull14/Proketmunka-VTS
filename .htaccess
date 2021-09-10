@@ -1,0 +1,13 @@
+Options +Indexes
+IndexOptions FancyIndexing FoldersFirst NameWidth=* DescriptionWidth=*
+
+RewriteEngine On
+RewriteBase /skybull-dogwalker-app/
+
+RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
+RewriteRule ^ %1 [L,NE,R=302]
+
+RewriteRule ^((?!public/)page/([^?]+)(.*))$ public/index.php/$2?$3 [L,NC]
+RewriteRule ^((?!public/)page/(.*))$ public/index.php/$2 [L,NC]
+RewriteRule ^((?!public/)action/(.*))$ public/index.php?action=$2 [L,NC]
+RewriteRule ^((?!public/)(.*))$ public/$1 [L,NC]

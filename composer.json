@@ -1,0 +1,14 @@
+{
+  "name": "skybull/dogwalker-app",
+  "type": "project",
+  "require": {
+    "phpmailer/phpmailer": "dev-master",
+    "ext-pdo": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Skybull\\DogwalkerApp\\": "source/"
+    }
+  },
+  "minimum-stability": "dev"
+}
